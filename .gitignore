@@ -1,0 +1,6 @@
+nodejs/examples-ts/*.js
+nodejs/node_modules/
+python/.idea/
+python/__pycache__/
+python/remoteit/__pycache__/
+*/examples*/*-test.*

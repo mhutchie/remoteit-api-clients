@@ -1,0 +1,8 @@
+{
+  "name": "remoteit",
+  "version": "1.0.0",
+  "description": "This is an API client for integrating with the remote.it API's in Node.js with no dependencies.",
+  "main": "index.js",
+  "author": "Michael Hutchison",
+  "license": "MIT"
+}
