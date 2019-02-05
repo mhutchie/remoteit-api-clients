@@ -8,7 +8,7 @@ This is an API client for integrating with the remote.it API's in Node.js with n
         - [RemoteItApiClient(username, password, developerKey)](#remoteitapiclientusername-password-developerkey)
 		- [client.listDevices(callback)](#clientlistdevicescallback)
 		- [client.getConnectionToDevice(deviceAddress, options, callback)](#clientgetconnectiontodevicedeviceaddress-options-callback)
-- [Download](remoteit)
+- [Download & Install](#download--install)
 - [Usage Examples:](#usage-examples)
 	- [Listing Devices](#listing-devices)
 	- [Get Connection to a Device](#get-connection-to-a-device)
@@ -36,12 +36,19 @@ This is an API client for integrating with the remote.it API's in Node.js with n
 		- hostip: (Optional) The clients public IP address, which is used to enforce "IP restriction" upon making the connection. Defaults to the IP address of the the API caller if not provided.
 	- callback: a function accepting two arguments (error, connection). If `error` is null, then the request was successful and `connection` will contain the connection details for the device. If an error has occured, `error` is a string containing the reason.
 
+### Download & Install
+1. Download the directory [remoteit](remoteit)
+2. Save the downloaded remoteit directory into the ./node_modules directory of your project. (Create a ./node_modules directory if it doesn't already exist)
+3. Import the module into your code by:
+	- JavaScript: `const { RemoteItApiClient } = require('remoteit');`
+	- TypeScript: `import { RemoteItApiClient } from "remoteit";`
+
 ### Usage Examples
 
 #### Listing Devices
 This example lists all of your remote.it devices. Source code: [\[js\]](examples-js/list-devices.js) [\[ts\]](examples-ts/list-devices.ts)
 ```javascript
-const { RemoteItApiClient } = require('./remoteit');
+const { RemoteItApiClient } = require('remoteit');
 
 let client = new RemoteItApiClient("<remote.it username>", "<remote.it password>", "<remote.it developer key>");
 
@@ -80,7 +87,7 @@ Output:
 #### Get Connection to a Device
 This example gets a connection to a remote.it device. Source code: [\[js\]](examples-js/get-connection-to-device.js) [\[ts\]](examples-ts/get-connection-to-device.ts)
 ```javascript
-const { RemoteItApiClient } = require('./remoteit');
+const { RemoteItApiClient } = require('remoteit');
 
 let client = new RemoteItApiClient("<remote.it username>", "<remote.it password>", "<remote.it developer key>");
 

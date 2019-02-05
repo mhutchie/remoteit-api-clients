@@ -9,7 +9,7 @@ This is an API client for integrating with the remote.it API's in Python.
 		- [client.list_devices()](#clientlist_devices)
 		- [client.get_connection_to_device(device_address, \[wait, hostip\])](#clientget_connection_to_devicedevice_address-wait-hostip)
     - Dependency: [requests](https://pypi.org/project/requests/)
-- [Download](remoteit)
+- [Download & Install](#download--install)
 - [Usage Examples:](#usage-examples)
 	- [Listing Devices](#listing-devices)
 	- [Get Connection to a Device](#get-connection-to-a-device)
@@ -34,6 +34,11 @@ This is an API client for integrating with the remote.it API's in Python.
 	- wait: (Optional) Whether to wait for the connection or not
 	- hostip: (Optional) The clients public IP address, which is used to enforce "IP restriction" upon making the connection. Defaults to the IP address of the the API caller if not provided.
 - Output: A dictionary containing connection details.
+
+### Download & Install
+1. Download the directory [remoteit](remoteit)
+2. Save the downloaded remoteit directory into a directory in your [Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
+3. Import the module into your code by: `from remoteit import RemoteItApiClient`
 
 ### Usage Examples
 

@@ -8,7 +8,7 @@ This is an API client for integrating with the remote.it API's in PHP with no de
         - [RemoteItApiClient(username, password, developerKey)](#remoteitapiclientusername-password-developerkey)
 		- [client->listDevices()](#client-listdevices)
 		- [client->getConnectionToDevice(deviceAddress, options)](#client-getconnectiontodevicedeviceaddress-options)
-- [Download](remoteit)
+- [Download & Install](#download--install)
 - [Usage Examples:](#usage-examples)
 	- [Listing Devices](#listing-devices)
 	- [Get Connection to a Device](#get-connection-to-a-device)
@@ -35,6 +35,11 @@ This is an API client for integrating with the remote.it API's in PHP with no de
 		- hostip: (Optional) The clients public IP address, which is used to enforce "IP restriction" upon making the connection. Defaults to the IP address of the the API caller if not provided.
 - Output: An object containing connection details.
 
+### Download & Install
+1. Download the directory [remoteit](remoteit)
+2. Save the downloaded remoteit directory into the directory of your project.
+3. Import the module into your code by: `require "<path-of-remoteit-directory>/remoteit.php";`
+
 ### Usage Examples
 
 #### Listing Devices
@@ -42,7 +47,7 @@ This example lists all of your remote.it devices. [Source code](examples/list-de
 ```php
 <?php
 
-require "../remoteit/remoteit.php";
+require "remoteit/remoteit.php";
 
 $client = new RemoteItApiClient("<remote.it username>", "<remote.it password>", "<remote.it developer key>");
 
@@ -87,7 +92,7 @@ This example gets a connection to a remote.it device. [Source code](examples/get
 ```php
 <?php
 
-require "../remoteit/remoteit.php";
+require "remoteit/remoteit.php";
 
 $client = new RemoteItApiClient("<remote.it username>", "<remote.it password>", "<remote.it developer key>");
 
